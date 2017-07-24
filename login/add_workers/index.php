@@ -56,12 +56,12 @@ include ('../db_scripts/LoginDbCall.php');
                         <div class="form-group"><br>
                             <strong>City</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <select name="city">
-                                <option value="nagpur">Select a City </option>
+                                <option value="nagpur">Select a City of your choice</option>
                                 <option value="nagpur">Nagpur</option>
                                 <option value="delhi">Delhi</option>
                                 <option value="mumbai">Mumbai</option>
                                 <option value="banglore">Banglore</option>
-                                <option value="Pune">Pune</option>
+                                <option value="pune">Pune</option>
                             </select>
                         </div>
                         <div class="form-group"><br>

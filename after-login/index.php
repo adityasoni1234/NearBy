@@ -121,6 +121,8 @@ if(isset($_SESSION['username']) && isset($_SESSION['password']))
                             try{
 
                                 var info = JSON.parse(data);
+//                                console.log(info[0]);
+                                var all_workers=new Array();
                                 //no data will be found if wrong city is seleted
                                 if(info.length ==0)
                                 {
@@ -133,19 +135,27 @@ if(isset($_SESSION['username']) && isset($_SESSION['password']))
                                 }
                                 else
                                 {
-                                    for(var i=0;i<info.length;i++)
+                                    for(var p=0;p<info.length;p++)
+                                    {
+                                        for(var q=0;q<info[p].length;q++)
+                                        {
+                                            all_workers.push(info[p][q]);
+                                        }
+                                    }
+//                                    console.log(all_workers);
+                                    for(var i=0;i<all_workers.length;i++)
                                     {
                                         var position=new Object();
-                                        position.name=info[i][0].worker_name;
-                                        position.type=info[i][0].worker_type;
-                                        position.address=info[i][0].address;
-                                        position.lat=info[i][0].lat;
-                                        position.lng=info[i][0].lng;
-                                        position.contact=info[i][0].mobile;
+                                        position.name=all_workers[i].worker_name;
+                                        position.type=all_workers[i].worker_type;
+                                        position.address=all_workers[i].address;
+                                        position.lat=all_workers[i].lat;
+                                        position.lng=all_workers[i].lng;
+                                        position.contact=all_workers[i].mobile;
                                         workerLocations.push(position);
                                     }
 //                          Clearing Array after the work is done
-                                    console.log(workerLocations);
+//                                    console.log(workerLocations);
 
                                     placeMarkers();
                                     workerLocations=[];
@@ -461,15 +471,15 @@ if(isset($_SESSION['username']) && isset($_SESSION['password']))
                         </div>
                         <div class="form-group col-md-7 pull-right">
                             <div class="checkbox checkbox-inline checkbox-success col-md-4">
-                                <input type="checkbox" id="inlineCheckbox1" class="option" value="carpainter">
+                                <input type="checkbox" id="inlineCheckbox1" class="" value="carpainter">
                                 <label for="inlineCheckbox1"> Carpenter </label>
                             </div>
                             <div class="checkbox checkbox-success checkbox-inline col-md-4">
-                                <input type="checkbox" id="inlineCheckbox2" class="option" value="plumber">
+                                <input type="checkbox" id="inlineCheckbox2" class="" value="plumber">
                                 <label for="inlineCheckbox2"> Plumber </label>
                             </div>
                             <div class="checkbox checkbox-inline checkbox-success col-md-3">
-                                <input type="checkbox" id="inlineCheckbox3" class="option" value="washerman">
+                                <input type="checkbox" id="inlineCheckbox3" class="" value="washerman">
                                 <label for="inlineCheckbox3"> Washerman </label>
                             </div>
                         </div>

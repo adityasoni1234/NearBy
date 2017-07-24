@@ -25,7 +25,6 @@
 
         // disables backspace on page except on input fields and textarea..
         document.body.onkeydown = function (e) {
-            alert('You Have to log out First');
             var elm = e.target.nodeName.toLowerCase();
             if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
                 e.preventDefault();
