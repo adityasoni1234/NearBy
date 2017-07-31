@@ -95,9 +95,8 @@ if(isset($_POST['save_worker']))
             {
                 return 1;
             }
-            else
-                return 0;
         }
+        return 0;
     }
 
     if(checkAdminId())

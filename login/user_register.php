@@ -37,7 +37,7 @@ include ('db_scripts/LoginDbCall.php');
                         </div>
                         <div class="form-group">
                             <label for="reg_password" class="sr-only">Password</label>
-                            <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password" required="required">
+                            <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password" required="required" minlength="8">
                         </div>
                         <div class="form-group">
                             <label for="reg_email" class="sr-only">Email</label>
